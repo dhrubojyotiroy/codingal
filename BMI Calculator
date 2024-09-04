@@ -1,0 +1,4 @@
+w = int(input("Enter your weight in KG: "))
+h = int(input("Enter your height in Meters: "))
+bmi = w/(h**2)
+print("Your BMI is",bmi,"kgs/squared meter")
