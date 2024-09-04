@@ -1,0 +1,20 @@
+import math
+def IsPrime(n):
+    if n < 2:
+        return False
+    for i in range(2,int(math.sqrt(n)) + 1):
+        if n%i == 0:
+            return False
+    return True
+
+
+def FirstPrime(limit):
+    primes = []
+    num = 2
+    while len(primes) < limit:
+        if IsPrime(num):
+            primes.append(num)
+        num += 1
+    return primes
+p = int(input("Enter the last limit: "))
+print(FirstPrime(p))
